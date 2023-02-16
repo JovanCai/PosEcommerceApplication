@@ -30,4 +30,4 @@ jobs:
         run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data && ./gradlew test
 
       - name: Stop docker-compose
-        run: docker-compose down
+        run: cd src/main/resources && docker-compose down
