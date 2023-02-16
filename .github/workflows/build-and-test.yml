@@ -10,8 +10,11 @@ jobs:
       - name: Run docker-compose
         run: cd src/main/resources && docker-compose up -d && cd ../../../../
 
+      - name: Change file ownership for src/main/resources
+        run: sudo chown -R 999:999 src/main/resources
+
       - name: Grant file permissions for postgres-data
-        run: chmod 777 src/main/resources/postgres-data
+        run: chmod -R 777 src/main/resources/postgres-data
 
       - name: Set up JDK 17
         uses: actions/setup-java@v1
