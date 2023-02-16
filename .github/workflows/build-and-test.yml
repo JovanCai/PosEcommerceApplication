@@ -1,4 +1,5 @@
 # Compile docker then build and test the project
+
 name: Build and Test
 on: [push]
 jobs:
@@ -6,14 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: isbang/compose-action@v1.4.1
-        with:
-          compose-file: "./src/main/resources/docker-compose.yml"
-#      - name: Run docker-compose
-#        run: cd src/main/resources && docker-compose up -d && cd ../../../../
-#
-#      - name: Grant file permissions for postgres-data
-#        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data
+
+      - name: Run docker-compose
+        run: cd src/main/resources && docker-compose up -d && cd ../../../../
+
+      - name: Grant file permissions for postgres-data
+        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data
 
       - name: Set up JDK 17
         uses: actions/setup-java@v1
@@ -28,7 +27,7 @@ jobs:
           DATABASE_URL: jdbc:postgresql://localhost:5432/postgres
           DATABASE_USERNAME: postgres
           DATABASE_PASSWORD: postgres
-        run: ./gradlew build
+        run: ./gradlew build --info
 
       - name: Run tests
         run: ./gradlew test
