@@ -11,9 +11,6 @@ jobs:
       - name: Run docker-compose
         run: cd src/main/resources && docker-compose up -d && cd ../../../../
 
-#      - name: Grant file permissions for postgres-data
-#        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data
-
       - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
@@ -22,15 +19,15 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build with Gradle
+      - name: Grant file permissions for postgres-data then build with Gradle
         env:
           DATABASE_URL: jdbc:postgresql://localhost:5432/postgres
           DATABASE_USERNAME: postgres
           DATABASE_PASSWORD: postgres
-        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data && ./gradlew build --info
+        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data && ./gradlew build
 
-      - name: Run tests
-        run: ./gradlew test
+      - name: Grant file permissions for postgres-data then run tests
+        run: sudo chown -R 999:999 src/main/resources/postgres-data && sudo chmod -R 777 src/main/resources/postgres-data && ./gradlew test
 
       - name: Stop docker-compose
         run: docker-compose down
