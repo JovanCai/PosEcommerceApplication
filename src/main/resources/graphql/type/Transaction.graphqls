@@ -1,7 +1,7 @@
 type Transaction {
-    id:            String!
-    price:         Float!
-    priceModifier: Float!
-    method:        Method!
-    createdAt:     DateTime!
+    id:             String!
+    price:          Float!
+    price_modifier: Float!
+    method:         Method!
+    created_at:     DateTime!
 }

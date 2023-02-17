@@ -1,6 +1,6 @@
 input TransactionInput {
-    id:            String!
-    price:         Float!
-    priceModifier: Float!
-    method:        Method!
+    id:             String!
+    price:          Float!
+    price_modifier: Float!
+    method:         Method!
 }

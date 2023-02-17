@@ -5,5 +5,5 @@ type Sale {
     transaction_id: String!
     final_price:    Float!
     points:         Float!
-    createdAt:      DateTime!
+    created_at:     DateTime!
 }
