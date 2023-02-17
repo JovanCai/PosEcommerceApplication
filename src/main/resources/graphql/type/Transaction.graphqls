@@ -1,0 +1,7 @@
+type Transaction {
+    id:            String!
+    price:         Float!
+    priceModifier: Float!
+    method:        Method!
+    createdAt:     DateTime!
+}

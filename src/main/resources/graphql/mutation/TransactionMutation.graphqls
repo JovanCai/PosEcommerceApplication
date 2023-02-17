@@ -1,0 +1,3 @@
+extend type Mutation {
+    createTransaction(transaction:TransactionInput):Transaction
+}

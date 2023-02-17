@@ -1,0 +1,6 @@
+input TransactionInput {
+    id:            String!
+    price:         Float!
+    priceModifier: Float!
+    method:        Method!
+}
