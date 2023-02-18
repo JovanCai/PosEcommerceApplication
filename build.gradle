@@ -27,6 +27,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-graphql'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
+	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:13.0.0'
 	implementation 'com.graphql-java:graphql-java-extended-scalars:2023-01-24T02-11-56-babda5f'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
