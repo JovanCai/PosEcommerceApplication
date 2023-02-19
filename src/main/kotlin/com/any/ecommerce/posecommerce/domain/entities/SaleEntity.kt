@@ -6,13 +6,14 @@ import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import jakarta.persistence.Table
 import java.time.LocalDateTime
+import java.util.UUID
 
 @Entity
-@Table(name = "sales")
+@Table(name = "sale")
 data class SaleEntity(
     @Id
     @Column(name = "id")
-    val id: String,
+    val id: String = UUID.randomUUID().toString(),
 
     @Column(name = "transaction_id")
     val transactionId: String,

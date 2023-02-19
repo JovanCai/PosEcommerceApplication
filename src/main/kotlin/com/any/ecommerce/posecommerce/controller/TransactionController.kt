@@ -1,6 +1,8 @@
 package com.any.ecommerce.posecommerce.controller
 
+import com.any.ecommerce.posecommerce.request.SearchSalesRequest
 import com.any.ecommerce.posecommerce.request.TransactionRequest
+import com.any.ecommerce.posecommerce.response.SalesResponse
 import com.any.ecommerce.posecommerce.response.TransactionResponse
 import com.any.ecommerce.posecommerce.service.sale.SaleService
 import com.any.ecommerce.posecommerce.service.transaction.TransactionService
@@ -22,5 +24,7 @@ class TransactionController(
     }
 
     @GetMapping("/sales")
-    fun searchSales() = saleService.getSalesByDateTimeRange("2022-09-01T00:00:00Z", "2022-09-01T23:59:59Z")
+    fun searchSales(@RequestBody searchSalesRequest: SearchSalesRequest): SalesResponse {
+        return saleService.getSalesByDateTimeRange(searchSalesRequest.startDateTime, searchSalesRequest.endDateTime)
+    }
 }
