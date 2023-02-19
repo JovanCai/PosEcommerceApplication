@@ -1,0 +1,8 @@
+enum Method {
+    CASH
+    CASH_ON_DELIVERY
+    VISA
+    MASTERCARD
+    AMEX
+    JCB
+}
