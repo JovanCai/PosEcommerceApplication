@@ -1,9 +1,5 @@
 # POS integrated e-commerce platform: Point System
 
-----
-
-## Introduction
-
 This is a POS integrated e-commerce platform which offers a point system and has a vast collection of payment methods
 integrated.
 
