@@ -2,6 +2,9 @@ package com.any.ecommerce.posecommerce.response
 
 import java.time.LocalDateTime
 
+/**
+ * Response for the sales query
+ */
 data class SalesResponse(
     val sales: List<SaleResponse>
 ) {

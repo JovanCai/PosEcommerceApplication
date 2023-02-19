@@ -4,6 +4,9 @@ import com.any.ecommerce.posecommerce.domain.entities.enum.Method
 import java.time.LocalDateTime
 import javax.validation.constraints.NotNull
 
+/**
+ * Request class for transaction
+ */
 data class TransactionRequest(
     @field:NotNull
     var price: Float,

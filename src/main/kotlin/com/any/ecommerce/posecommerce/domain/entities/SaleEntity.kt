@@ -8,6 +8,9 @@ import jakarta.persistence.Table
 import java.time.LocalDateTime
 import java.util.UUID
 
+/**
+ * Entity class for sale
+ */
 @Entity
 @Table(name = "sale")
 data class SaleEntity(

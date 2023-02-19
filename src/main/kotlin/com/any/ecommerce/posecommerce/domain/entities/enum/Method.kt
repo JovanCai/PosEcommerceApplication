@@ -1,5 +1,8 @@
 package com.any.ecommerce.posecommerce.domain.entities.enum
 
+/**
+ * Enum class for payment method
+ */
 enum class Method {
     CASH,
     CASH_ON_DELIVERY,

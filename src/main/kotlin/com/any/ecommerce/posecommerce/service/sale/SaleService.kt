@@ -12,22 +12,28 @@ import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 import java.util.UUID
 
+/**
+ * Service for Sale
+ */
 @Service
 class SaleService(
     private val saleRepository: SaleRepository
 ) {
+    // Add sale to the database using the transaction information
     fun addSale(transactionRequest: TransactionRequest, transactionId: String): TransactionResponse {
         val saleEntity = calculateSale(transactionRequest, transactionId)
         saleRepository.save(saleEntity)
         return saleEntity.toDto().toTransactionResponse()
     }
 
+    // Get the sales within a date range broken down into hours
     fun getSalesByDateTimeRange(from: LocalDateTime, to: LocalDateTime? = LocalDateTime.now()): SalesResponse {
         val dto: List<SaleDto> =
             saleRepository.getSalesByDateTimeRange(from, to).map { it.toDto() }
         return generateSalesResponse(from, to, dto)
     }
 
+    // Calculate the sale information
     private fun calculateSale(transactionRequest: TransactionRequest, transactionId: String): SaleEntity {
         return SaleEntity(
             id = UUID.randomUUID().toString(),
@@ -40,6 +46,8 @@ class SaleService(
 
     /**
      * Separate the List<SaleDto> within a date range broken down into hours return as SalesResponse
+     * @param from Start date
+     * @param to End date
      * @return SalesResponse
      */
     private fun generateSalesResponse(
@@ -72,11 +80,20 @@ class SaleService(
         sales.associateBy { it.datetime.dayOfYear to it.datetime.hour }.forEach { (key, value) ->
             generatedSalesList[key] = value
         }
-        val dd = generatedSalesList.values.toMutableList()
-        dd[0] = SalesResponse.SaleResponse(datetime = from, sales = dd[0].sales, points = dd[0].points)
-        return SalesResponse(dd)
+        // Replace the first element with the “from” date
+        val result = generatedSalesList.values.toMutableList()
+        result[0] = SalesResponse.SaleResponse(datetime = from, sales = result[0].sales, points = result[0].points)
+        return SalesResponse(result)
     }
 
+    /**
+     * Generate a list of hours within the date range
+     * ex. 2021-01-01 00:19:00 to 2021-01-02 01:59:00 will return
+     * 2021-01-01 00:19:00, 2021-01-01 01:00:00,...,2021-01-02 01:00:00
+     * @param startTime LocalDateTime
+     * @param endTime LocalDateTime
+     * @return MutableList<SalesResponse.SaleResponse>
+     */
     private fun generatedSalesList(
         startTime: LocalDateTime,
         endTime: LocalDateTime? = LocalDateTime.now()

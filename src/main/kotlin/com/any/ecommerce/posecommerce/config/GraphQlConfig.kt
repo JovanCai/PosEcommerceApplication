@@ -6,9 +6,12 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.graphql.execution.RuntimeWiringConfigurer
 
-
+/**
+ * This class is used to configure the GraphQL runtime wiring.
+ */
 @Configuration
-public class GraphQlConfig {
+class GraphQlConfig {
+
     @Bean
     fun runtimeWiringConfigurer(): RuntimeWiringConfigurer? {
         return RuntimeWiringConfigurer { wiringBuilder: RuntimeWiring.Builder -> wiringBuilder.scalar(ExtendedScalars.DateTime) }

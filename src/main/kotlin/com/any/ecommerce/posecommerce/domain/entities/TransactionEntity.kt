@@ -9,6 +9,9 @@ import jakarta.persistence.Table
 import java.time.LocalDateTime
 import java.util.UUID
 
+/**
+ * Entity class for transaction
+ */
 @Entity
 @Table(name = "transaction")
 data class TransactionEntity(

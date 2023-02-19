@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor
 import org.springframework.stereotype.Component
 import java.time.LocalDateTime
 
+/**
+ * Resolver for the sale entity
+ */
 @Component
 @AllArgsConstructor
 class SaleMutationResolver(
