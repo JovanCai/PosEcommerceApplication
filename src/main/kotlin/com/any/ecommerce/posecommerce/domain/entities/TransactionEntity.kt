@@ -35,10 +35,10 @@ data class TransactionEntity(
         fun fromRequest(request: TransactionRequest): TransactionEntity {
             return TransactionEntity(
                 id = UUID.randomUUID().toString(),
-                price = request.price,
-                priceModifier = request.priceModifier,
-                method = request.paymentMethod,
-                createdAt = request.dateTime
+                price = request.price!!,
+                priceModifier = request.priceModifier!!,
+                method = request.paymentMethod!!,
+                createdAt = request.dateTime!!
             )
 
         }

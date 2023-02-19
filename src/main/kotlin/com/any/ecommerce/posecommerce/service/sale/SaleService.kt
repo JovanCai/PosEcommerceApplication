@@ -38,9 +38,9 @@ class SaleService(
         return SaleEntity(
             id = UUID.randomUUID().toString(),
             transactionId = transactionId,
-            finalPrice = transactionRequest.price * transactionRequest.priceModifier,
-            points = Method.calculatePoint(transactionRequest.price, transactionRequest.paymentMethod),
-            createdAt = transactionRequest.dateTime
+            finalPrice = transactionRequest.price!! * transactionRequest.priceModifier!!,
+            points = Method.calculatePoint(transactionRequest.price!!, transactionRequest.paymentMethod!!),
+            createdAt = transactionRequest.dateTime!!
         )
     }
 

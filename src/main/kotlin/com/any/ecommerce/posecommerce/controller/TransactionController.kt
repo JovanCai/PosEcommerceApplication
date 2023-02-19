@@ -6,7 +6,12 @@ import com.any.ecommerce.posecommerce.response.SalesResponse
 import com.any.ecommerce.posecommerce.response.TransactionResponse
 import com.any.ecommerce.posecommerce.service.sale.SaleService
 import com.any.ecommerce.posecommerce.service.transaction.TransactionService
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+
 import javax.validation.Valid
 
 /**
