@@ -41,6 +41,6 @@ class TransactionController(
      */
     @GetMapping("/sales")
     fun searchSales(@RequestBody searchSalesRequest: SearchSalesRequest): SalesResponse {
-        return saleService.getSalesByDateTimeRange(searchSalesRequest.startDateTime, searchSalesRequest.endDateTime)
+        return saleService.getSalesByDateTimeRange(searchSalesRequest.startDateTime!!, searchSalesRequest.endDateTime)
     }
 }

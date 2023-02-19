@@ -1,13 +1,19 @@
 package com.any.ecommerce.posecommerce.request
 
 import java.time.LocalDateTime
-import javax.validation.constraints.NotNull
 
 /**
  * Request class for search sales
  */
 data class SearchSalesRequest(
-    @field:NotNull
-    val startDateTime: LocalDateTime,
+    val startDateTime: LocalDateTime?,
     val endDateTime: LocalDateTime?
-)
+) {
+    init {
+        // Verify start date time is included
+        if (startDateTime == null) throw IllegalArgumentException("start date time must be included")
+
+        // Verify end date time is after start date time
+        if (endDateTime!!.isBefore(startDateTime)) throw IllegalArgumentException("end date time must be after start date time")
+    }
+}
