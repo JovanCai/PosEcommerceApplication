@@ -1,0 +1,6 @@
+input SaleInput {
+    id:             String!
+    transaction_id: String!
+    final_price:    Float!
+    points:         Float!
+}
