@@ -1,6 +1,6 @@
-package com.any.ecommerce.posecommerce.domain.entities
+package com.any.ecommerce.posecommerce.infrastructure.entities
 
-import com.any.ecommerce.posecommerce.dto.SaleDto
+import com.any.ecommerce.posecommerce.domain.dto.SaleDto
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.Id

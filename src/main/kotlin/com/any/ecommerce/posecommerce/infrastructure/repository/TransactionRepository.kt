@@ -1,6 +1,6 @@
-package com.any.ecommerce.posecommerce.repository
+package com.any.ecommerce.posecommerce.infrastructure.repository
 
-import com.any.ecommerce.posecommerce.domain.entities.TransactionEntity
+import com.any.ecommerce.posecommerce.infrastructure.entities.TransactionEntity
 import org.springframework.data.jpa.repository.JpaRepository
 
 /**

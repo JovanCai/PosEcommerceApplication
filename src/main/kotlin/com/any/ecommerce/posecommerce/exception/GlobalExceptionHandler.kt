@@ -1,6 +1,6 @@
 package com.any.ecommerce.posecommerce.exception
 
-import com.any.ecommerce.posecommerce.domain.entities.enum.Method
+import com.any.ecommerce.posecommerce.infrastructure.entities.enum.Method
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.converter.HttpMessageNotReadableException

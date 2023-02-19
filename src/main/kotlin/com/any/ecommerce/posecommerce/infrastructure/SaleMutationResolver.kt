@@ -1,7 +1,7 @@
-package com.any.ecommerce.posecommerce.resolver.sale
+package com.any.ecommerce.posecommerce.infrastructure
 
-import com.any.ecommerce.posecommerce.response.SalesResponse
-import com.any.ecommerce.posecommerce.service.sale.SaleService
+import com.any.ecommerce.posecommerce.application.response.SalesResponse
+import com.any.ecommerce.posecommerce.domain.service.SaleService
 import graphql.kickstart.tools.GraphQLQueryResolver
 import lombok.AllArgsConstructor
 import org.springframework.stereotype.Component

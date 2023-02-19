@@ -1,17 +1,16 @@
-package com.any.ecommerce.posecommerce.controller
+package com.any.ecommerce.posecommerce.application.controller
 
-import com.any.ecommerce.posecommerce.request.SearchSalesRequest
-import com.any.ecommerce.posecommerce.request.TransactionRequest
-import com.any.ecommerce.posecommerce.response.SalesResponse
-import com.any.ecommerce.posecommerce.response.TransactionResponse
-import com.any.ecommerce.posecommerce.service.sale.SaleService
-import com.any.ecommerce.posecommerce.service.transaction.TransactionService
+import com.any.ecommerce.posecommerce.application.request.SearchSalesRequest
+import com.any.ecommerce.posecommerce.application.request.TransactionRequest
+import com.any.ecommerce.posecommerce.application.response.SalesResponse
+import com.any.ecommerce.posecommerce.application.response.TransactionResponse
+import com.any.ecommerce.posecommerce.domain.service.SaleService
+import com.any.ecommerce.posecommerce.domain.service.TransactionService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-
 import javax.validation.Valid
 
 /**

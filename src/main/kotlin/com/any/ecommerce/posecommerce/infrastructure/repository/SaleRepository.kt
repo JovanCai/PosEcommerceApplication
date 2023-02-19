@@ -1,6 +1,6 @@
-package com.any.ecommerce.posecommerce.repository
+package com.any.ecommerce.posecommerce.infrastructure.repository
 
-import com.any.ecommerce.posecommerce.domain.entities.SaleEntity
+import com.any.ecommerce.posecommerce.infrastructure.entities.SaleEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import java.time.LocalDateTime

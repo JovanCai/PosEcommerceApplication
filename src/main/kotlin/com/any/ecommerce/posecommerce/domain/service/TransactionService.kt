@@ -1,8 +1,8 @@
-package com.any.ecommerce.posecommerce.service.transaction
+package com.any.ecommerce.posecommerce.domain.service
 
-import com.any.ecommerce.posecommerce.domain.entities.TransactionEntity
-import com.any.ecommerce.posecommerce.repository.TransactionRepository
-import com.any.ecommerce.posecommerce.request.TransactionRequest
+import com.any.ecommerce.posecommerce.application.request.TransactionRequest
+import com.any.ecommerce.posecommerce.infrastructure.entities.TransactionEntity
+import com.any.ecommerce.posecommerce.infrastructure.repository.TransactionRepository
 import org.springframework.stereotype.Service
 
 /**
