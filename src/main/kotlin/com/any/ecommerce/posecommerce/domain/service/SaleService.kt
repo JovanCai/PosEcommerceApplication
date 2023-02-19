@@ -1,12 +1,12 @@
-package com.any.ecommerce.posecommerce.service.sale
+package com.any.ecommerce.posecommerce.domain.service
 
-import com.any.ecommerce.posecommerce.domain.entities.SaleEntity
-import com.any.ecommerce.posecommerce.domain.entities.enum.Method
-import com.any.ecommerce.posecommerce.dto.SaleDto
-import com.any.ecommerce.posecommerce.repository.SaleRepository
-import com.any.ecommerce.posecommerce.request.TransactionRequest
-import com.any.ecommerce.posecommerce.response.SalesResponse
-import com.any.ecommerce.posecommerce.response.TransactionResponse
+import com.any.ecommerce.posecommerce.application.request.TransactionRequest
+import com.any.ecommerce.posecommerce.application.response.SalesResponse
+import com.any.ecommerce.posecommerce.application.response.TransactionResponse
+import com.any.ecommerce.posecommerce.domain.dto.SaleDto
+import com.any.ecommerce.posecommerce.infrastructure.entities.SaleEntity
+import com.any.ecommerce.posecommerce.infrastructure.entities.enum.Method
+import com.any.ecommerce.posecommerce.infrastructure.repository.SaleRepository
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit

@@ -1,6 +1,6 @@
-package com.any.ecommerce.posecommerce.dto
+package com.any.ecommerce.posecommerce.domain.dto
 
-import com.any.ecommerce.posecommerce.response.TransactionResponse
+import com.any.ecommerce.posecommerce.application.response.TransactionResponse
 import java.time.LocalDateTime
 
 /**

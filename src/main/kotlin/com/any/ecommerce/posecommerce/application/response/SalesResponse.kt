@@ -1,4 +1,4 @@
-package com.any.ecommerce.posecommerce.response
+package com.any.ecommerce.posecommerce.application.response
 
 import java.time.LocalDateTime
 

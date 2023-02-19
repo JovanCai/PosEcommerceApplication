@@ -1,7 +1,7 @@
-package com.any.ecommerce.posecommerce.domain.entities
+package com.any.ecommerce.posecommerce.infrastructure.entities
 
-import com.any.ecommerce.posecommerce.domain.entities.enum.Method
-import com.any.ecommerce.posecommerce.request.TransactionRequest
+import com.any.ecommerce.posecommerce.application.request.TransactionRequest
+import com.any.ecommerce.posecommerce.infrastructure.entities.enum.Method
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.Id

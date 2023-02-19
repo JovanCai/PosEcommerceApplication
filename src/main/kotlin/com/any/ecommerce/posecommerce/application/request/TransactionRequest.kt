@@ -1,6 +1,6 @@
-package com.any.ecommerce.posecommerce.request
+package com.any.ecommerce.posecommerce.application.request
 
-import com.any.ecommerce.posecommerce.domain.entities.enum.Method
+import com.any.ecommerce.posecommerce.infrastructure.entities.enum.Method
 import java.time.LocalDateTime
 
 /**

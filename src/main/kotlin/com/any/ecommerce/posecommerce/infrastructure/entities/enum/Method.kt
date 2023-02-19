@@ -1,4 +1,4 @@
-package com.any.ecommerce.posecommerce.domain.entities.enum
+package com.any.ecommerce.posecommerce.infrastructure.entities.enum
 
 /**
  * Enum class for payment method
